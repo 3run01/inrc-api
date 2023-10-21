@@ -1,0 +1,86 @@
+doctype=html
+html
+    head
+        content-type:json 
+        title Pesquisa Detalhada
+    body
+        h5  Pesquisa Detalhada
+    div Resultado da Pesquisa 
+    p Status: #{status}	#{statusText}
+    if status  === 200
+        div
+        table
+            tr
+                iframe(src="http://192.168.237.85/sic/api/v1/foto" width='200' height='100')
+                iframe(src="http://192.168.237.85/sic/api/v1/cert" width='200', height='100')
+
+
+            tr
+                td Nome:#{nomeRegistroCivil}
+                td Sexo:#{sexo}
+            tr 
+                td #{filiacao[0]['tipofiliacao']}:#{filiacao[0]['nome']}
+                td #{filiacao[1]['tipofiliacao']}:#{filiacao[1]['nome']}
+            tr    
+                td País:#{pais}
+                td Naturalidade:#{descrnaturalidade} #{ufnaturalidade}
+            tr
+                td Cadastro Biométrico:#{cadastrobiometrico}
+                td Certificado Militar:#{certidaomilitar}
+            tr
+                td CIP:#{Cip}
+                td CNH:#{Cnh}
+            tr
+                td CNS:#{Cns}
+                td Cod. Nacionalidade:#{codnacionalidade} 
+            tr
+                td Cod Naturalidade Ibge:#{codnaturalidadeibge}
+                td CPF :#{Cpf} 
+            tr
+                td CTPS:#{Ctps}
+                td Dados da Certidão:#{dadosCertidao} 
+            tr
+                td Data Emissão:#{dataEmissao}
+                td Data. Nascimento:#{datanascimento} 
+            tr
+                td Naturalidade:#{descrnaturalidade}
+                td Dígito do RG:#{digitorg} 
+            tr
+                td Saúde Auditiva:#{indSaudeAuditiva}
+                td Autismo:#{indSaudeAutismo} 
+            tr
+                td Saúde Física:#{indSaudeFisica}
+                td Saúde Visual:#{indSaudeVisual} 
+            tr
+                td Saúde Intelectual:#{indSaudeIntelectual}
+                td Tipo Sangüineo:#{indTipoSanguineo} 
+            tr
+                td Observação:#{indSaudeObservacao}
+                td Nome Social:#{nomeSocial} 
+            tr
+                td Nro RG:#{numrg}
+                td Via da Emissão:#{via} 
+            tr
+                td Sequencial do RG:#{sequencialrg} 
+                td UF do RG:#{rgUF} 
+            tr
+                td Cédulas:#{cedulaEmissao}
+                td PisPasep:#{pispasep}
+            tr
+                td Tipo de Certidão:#{tipocertidao}
+                td Título de Eleitor:#{tituloEleitor} 
+            tr
+                td Polegar Mão Direita:#{maoDireitaPolegar}
+                td Indicador Mão Direita:#{maoDireitaIndicador}
+            tr
+                td Médio Mão Direita:#{maoDireitaMedio}
+                td Anular Mão Direita:#{maoDireitaAnular} 
+            tr
+                td Mínimo Mão Direita:#{maoDireitaMinimo}
+                td Polegar Mão Esquerda:#{maoEsquerdaPolegar}
+            tr
+                td Indicador Mão Esquerda:#{maoEsquerdaIndicador}
+                td Médio Mão Esquerda:#{maoEsquerdaMedio} 
+            tr
+                td Anular Mão Esquerda:#{maoEsquerdaAnular}
+                td Mínimo Mão Esquerda:#{maoEsquerdaMinimo} 

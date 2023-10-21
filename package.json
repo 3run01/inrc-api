@@ -1,0 +1,38 @@
+{
+  "name": "apiserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "babel-node src/server",
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "devstart": "nodemon --exec babel-node src/server",
+    "teststart": "nodemon --exec babel-node src/server --unhandled-rejections=strict"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.18.2",
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "fs-readdir-rec-gen": "^1.1.5",
+    "http-proxy": "^1.18.1",
+    "jimp": "^0.16.1",
+    "jsonwebtoken": "^8.5.1",
+    "nodejs-base64": "^2.0.0",
+    "oracledb": "^5.4.0",
+    "pug": "^3.0.2",
+    "qs": "^6.10.3",
+    "request-ip": "^3.0.1",
+    "sucrase": "^3.25.0"
+  }
+}
